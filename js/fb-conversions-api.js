@@ -55,7 +55,7 @@ function getFbclid() {
 // ==============================================
 // INICIALIZAÇÃO E CONFIGURAÇÃO
 // ==============================================
-const API_BASE_URL = ''; // API no mesmo domínio.
+const API_BASE_URL = 'https://mornatti-conversions-api.up.railway.app'; // API no mesmo domínio.
 const FACEBOOK_CONVERSIONS_CONFIG = {
   currency: 'BRL',
   debugMode: true, 
