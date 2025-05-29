@@ -1,0 +1,695 @@
+/* Hero Section - Otimizada com Princípios de Neuromarketing */
+.hero {
+    /* Fundo mais dinâmico para capturar atenção com gradiente mais profundo */
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0c0e1f 100%);
+    color: var(--color-white);
+    position: relative;
+    padding: calc(var(--space-xxxl) * 1.2) 0 var(--space-xxxl); /* Aumento do espaço superior */
+    overflow: hidden;
+    box-shadow: inset 0 -12px 35px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(82, 99, 255, 0.18) 0%, transparent 50%), /* Gradiente mais intenso */
+        radial-gradient(circle at 80% 70%, rgba(255, 188, 10, 0.12) 0%, transparent 50%);
+    z-index: 1;
+    animation: subtle-shift 15s ease-in-out infinite alternate;
+    opacity: 0.9; /* Ligeiramente mais visível */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(82, 99, 255, 0.08) 0%, transparent 70%);
+    z-index: 0;
+    animation: subtle-pulse 8s ease-in-out infinite;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Pill destacada para chamar atenção inicial */
+.highlight-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.7em 1.5em;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    font-weight: 600; /* Mais bold para maior contraste */
+    color: var(--color-white);
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.08);
+    margin-bottom: var(--space-xl); /* Mais espaço para respirar */
+    animation: fadeSlideIn 1s ease-out 0.2s both;
+    transform: translateZ(0);
+    letter-spacing: 0.02em;
+    max-width: fit-content; /* Evitar quebras em telas menores */
+}
+
+.highlight-pill i {
+    color: var(--color-secondary);
+    margin-right: 0.8em; /* Mais espaço para separar ícone do texto */
+    font-size: 1.15em;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Layout que prioriza o texto à esquerda (leitura ocidental) e vídeo à direita */
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+    position: relative;
+}
+
+/* Conteúdo com maior peso visual */
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    animation: fadeSlideIn 0.8s ease-out 0.4s both;
+    z-index: 5;
+}
+
+/* Headline principal com maior impacto visual */
+.hero-content h1 {
+    color: #ffffff; /* Branco total para máximo contraste */
+    margin-bottom: var(--space-lg);
+    position: relative;
+    letter-spacing: -0.03em;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada */
+    line-height: 1.15;
+    font-size: clamp(2.4rem, 5vw, 3.4rem); /* Tamanho maior para dominar a hierarquia */
+}
+
+/* Técnica de pergunta-problema seguida de empatia-solução */
+.headline-question {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 900;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.headline-answer {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 700;
+    font-size: 0.85em;
+    animation: fadeIn 1.2s ease-out 0.3s both;
+    margin-left: 0.2em; /* Pequeno recuo para separar visualmente */
+}
+
+/* Subtítulo com promessa de valor clara e timeframe específico */
+.subtitle {
+    color: var(--color-white);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    margin-bottom: var(--space-xl); /* Mais espaço antes dos pontos de dor/solução */
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+}
+
+/* Linha de destaque reforçando a separação visual */
+.subtitle::after {
+    content: '';
+    position: absolute;
+    width: 90px; /* Ligeiramente maior */
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-secondary-dark));
+    bottom: -16px;
+    left: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    opacity: 0.85; /* Contraste sutilmente reduzido */
+}
+
+/* Highlights com cor de destaque para pontos importantes */
+.text-highlight {
+    color: var(--color-secondary);
+    font-style: normal;
+    font-weight: 800;
+    position: relative;
+    white-space: nowrap; /* Mantém junto em telas menores */
+}
+
+/* Destacando a estrutura de dor-solução-benefício */
+.hero-content .sub-headline {
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: var(--space-xl);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.7; /* Mais espaçado para melhor legibilidade */
+    font-size: 1.1rem; /* Ligeiramente maior */
+}
+
+/* Estrutura de pontos com ícones que indicam dor, solução e benefício */
+.pain-point, .solution-point, .benefit-point {
+    display: block;
+    margin-bottom: 0.8em; /* Mais espaço para respirar */
+    position: relative;
+    padding-left: 1.5em; /* Maior recuo para os ícones */
+}
+
+.pain-point::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: var(--color-danger);
+    font-weight: 700;
+    font-size: 1.1em; /* Ícone ligeiramente maior */
+}
+
+.solution-point::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.benefit-point::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Elemento de destaque visual com efeito tridimensional */
+.hero-image {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    animation: fadeSlideIn 0.8s ease-out 0.6s both, float 6s ease-in-out infinite;
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3)); /* Sombra mais pronunciada */
+    z-index: 4;
+}
+
+/* Efeito 3D sutil para criar maior engajamento visual */
+.hero-illustration {
+    transform: rotateY(-5deg) rotateX(2deg);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-image:hover .hero-illustration {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.03); /* Zoom sutilmente maior */
+}
+
+/* Badges com alto contraste para atrair atenção periférica */
+.hero-badge {
+    position: absolute;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+    color: var(--color-primary-dark);
+    font-weight: 800; /* Mais forte para maior contraste */
+    font-size: 0.9rem; /* Ligeiramente maior */
+    padding: 0.5em 1.3em;
+    border-radius: 100px;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 188, 10, 0.4);
+    z-index: 10; /* Aumentado para garantir visibilidade */
+    animation: pulseLight 2s infinite;
+    letter-spacing: 0.02em;
+    text-transform: uppercase; /* Mais impacto com caixa alta */
+    font-size: 0.8rem;
+}
+
+.hero-badge.top-right {
+    top: 0;
+    right: 20px;
+    transform: translateY(-50%) rotate(3deg);
+}
+
+.hero-badge.bottom-left {
+    bottom: 15px;
+    left: 0;
+    transform: translateX(-20%) rotate(-3deg);
+}
+
+/* Player de vídeo destacado como elemento social proof */
+.video-player-container {
+    width: 100%;
+    max-width: 620px; /* Ligeiramente maior */
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: rotateY(-5deg) rotateX(2deg);
+}
+
+.hero-image:hover .video-player-container {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.03);
+}
+
+.video-player {
+    background: var(--color-primary-dark);
+    border-radius: 16px; /* Bordas mais arredondadas */
+    overflow: hidden;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: videoPulse 6s ease-in-out infinite alternate;
+}
+
+.video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px; /* Mais espaço para respirar */
+    background: rgba(0, 0, 0, 0.25); /* Mais escuro para contraste */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.video-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.control-dot.red {
+    background-color: #ff5f57;
+}
+
+.control-dot.yellow {
+    background-color: #ffbd2e;
+}
+
+.control-dot.green {
+    background-color: #28c840;
+}
+
+.video-title {
+    color: var(--color-white);
+    font-size: 15px; /* Ligeiramente maior */
+    font-weight: 600; /* Mais destaque */
+    opacity: 0.95; /* Mais visível */
+}
+
+.video-actions {
+    color: var(--color-white);
+    opacity: 0.8; /* Mais visível */
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.video-actions:hover {
+    opacity: 1;
+}
+
+/* Área de vídeo com proporção otimizada */
+.video-preview {
+    position: relative;
+    height: 350px; /* Ligeiramente maior */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1d3e 0%, #0d0f1f 100%);
+    overflow: hidden;
+}
+
+/* Estilo para o vídeo principal */
+.main-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Para manter a proporção do vídeo */
+    z-index: 1;
+    background-color: #0d0f1f;
+}
+
+.video-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(82, 99, 255, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 188, 10, 0.18) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.video-thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50%" y="50%" font-family="Arial" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="rgba(255,255,255,0.1)">PASSAPORTE</text></svg>');
+    background-repeat: repeat;
+    opacity: 0.35; /* Ligeiramente mais visível */
+    mix-blend-mode: overlay;
+    z-index: 2;
+}
+
+/* Botão de play como ponto focal de atenção/ação */
+.video-play-button {
+    width: 88px; /* Maior para ser mais visível */
+    height: 88px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-dark);
+    font-size: 32px; /* Maior para ser mais visível */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 
+        0 12px 25px rgba(0, 0, 0, 0.25),
+        0 0 0 10px rgba(255, 188, 10, 0.25);
+    animation: pulseLight 2s infinite;
+}
+
+.video-play-button:hover {
+    transform: translate(-50%, -50%) scale(1.08); /* Efeito mais pronunciado */
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.35),
+        0 0 0 15px rgba(255, 188, 10, 0.2);
+}
+
+/* Hover em todo o player de vídeo */
+.video-player:hover {
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.18),
+        0 0 40px rgba(82, 99, 255, 0.25);
+    transform: translateY(-8px); /* Efeito de flutuação mais pronunciado */
+}
+
+.video-progress {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px; /* Mais espaço */
+    background: rgba(0, 0, 0, 0.2); /* Mais escuro para contraste */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 5px; /* Mais alta para melhor visibilidade */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 12px;
+}
+
+.progress-complete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15%;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-secondary-dark));
+    border-radius: 3px;
+}
+
+.video-time {
+    color: var(--color-white);
+    font-size: 13px; /* Ligeiramente maior */
+    font-weight: 600;
+    opacity: 0.8; /* Mais visível */
+}
+
+/* CTA Principal otimizado para maior conversão */
+.hero .cta-button {
+    padding: 1em 2em; /* Botão ligeiramente maior */
+    font-size: 1.05rem; /* Texto ligeiramente maior */
+    border-radius: 8px; /* Bordas ligeiramente mais arredondadas */
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.25),
+        0 0 0 2px rgba(255, 188, 10, 0.25),
+        0 5px 15px rgba(255, 188, 10, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.hero .cta-button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 0 3px rgba(255, 188, 10, 0.3),
+        0 8px 20px rgba(255, 188, 10, 0.25);
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+    .hero-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .video-preview {
+        height: 390px; /* Maior para telas grandes */
+    }
+    
+    .video-player-container {
+        max-width: 680px;
+    }
+    
+    .video-play-button {
+        width: 95px;
+        height: 95px;
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-layout {
+        grid-template-columns: 6fr 5fr;
+        align-items: center;
+    }
+    
+    .hero-content {
+        padding-right: var(--space-xl);
+    }
+    
+    /* Esconder o conteúdo duplicado do mobile no desktop */
+    .mobile-content-after-video {
+        display: none;
+    }
+
+    /* Garantir que os elementos originais da hero-content estejam visíveis no desktop */
+    .hero-content .subtitle,
+    .hero-content .sub-headline {
+        display: block;
+    }
+    
+    .hero-content .cta-button {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding: var(--space-xxl) 0 var(--space-xl);
+    }
+    
+    /* Ajuste para vídeos em formato paisagem em telas menores */
+    .main-video {
+        object-fit: contain; /* Manter a proporção correta */
+    }
+    
+    /* Aumentar destaque ao vídeo quando entre a headline e subheadline */
+    .video-player {
+        box-shadow: 
+            0 20px 45px rgba(0, 0, 0, 0.45),
+            0 0 0 1px rgba(255, 255, 255, 0.18),
+            0 0 35px rgba(82, 99, 255, 0.28);
+    }
+    
+    /* Reset da flexbox para permitir posicionamento tradicional */
+    .hero-layout {
+        display: block;
+    }
+    
+    .hero-image {
+        max-width: 100%; /* Ocupar largura total */
+        margin: 0 auto;
+    }
+    
+    .hero-content h1 {
+        font-size: clamp(1.9rem, 5vw, 2.3rem);
+    }
+    
+    .subtitle {
+        font-size: clamp(1.3rem, 3vw, 1.6rem);
+    }
+        
+    .video-player-container {
+        max-width: 100%;
+    }
+    
+    .video-preview {
+        height: 56vw; /* Proporção 16:9 baseada na largura da tela */
+    }
+    
+    .video-header {
+        padding: 10px 14px;
+    }
+    
+    .video-play-button {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+    }
+    
+    .control-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .video-title {
+        font-size: 13px;
+    }
+    
+    .highlight-pill {
+        font-size: 0.85rem;
+    }
+    
+    /* Ajuste para colocar o vídeo entre headline e subheadline no mobile */
+    .hero-layout {
+        display: block;
+        position: relative;
+    }
+
+    /* Ajustes na headline para mobile */
+    .hero-content h1 {
+        margin-bottom: var(--space-xl);
+    }
+
+    /* Espaçamento para o vídeo/imagem no mobile */
+    .hero-image {
+        margin-bottom: var(--space-xl);
+    }
+
+    /* Esconder elementos originais da hero-content que serão duplicados abaixo no mobile */
+    .hero-content .subtitle,
+    .hero-content .sub-headline,
+    .hero-content .cta-button {
+        display: none;
+    }
+
+    /* Remover o ::after do .hero no mobile */
+    .hero::after {
+        content: none;
+    }
+
+    /* Mostrar e estilizar o container do conteúdo duplicado para mobile */
+    .mobile-content-after-video {
+        display: block;
+        margin-top: var(--space-xl);
+        animation: fadeSlideIn 0.5s ease-out;
+        padding: 0 var(--space-sm); /* Pequeno padding horizontal */
+    }
+
+    /* Ajuste de padding para hero-content no mobile */
+    .hero-content {
+        padding-bottom: 0;
+    }
+    
+    /* Reforçar a call-to-action no mobile */
+    .mobile-content-after-video .cta-button {
+        width: 100%; /* Botão de largura total no mobile */
+        margin-top: var(--space-md);
+        padding: 1.1em 1.5em;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-preview {
+        height: 65vw; /* Proporção aumentada para telas pequenas */
+    }
+    
+    .video-player-container {
+        margin-top: 0;
+        margin-bottom: var(--space-lg);
+    }
+    
+    /* Ajustes finos para telas muito pequenas */
+    .hero-content h1 {
+        font-size: 1.7rem;
+        margin-bottom: var(--space-lg);
+        line-height: 1.2;
+    }
+    
+    .video-play-button {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+    
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.3em 1em;
+    }
+    
+    .subtitle {
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+    
+    .hero-content .sub-headline,
+    .mobile-content-after-video .sub-headline {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+        
+    .pain-point, .solution-point, .benefit-point {
+        padding-left: 1.6em;
+        margin-bottom: 0.9em;
+    }
+       
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.3em 0.8em;
+    }
+    
+    .highlight-pill {
+        font-size: 0.8rem;
+        padding: 0.5em 1em;
+        width: auto;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        justify-content: center;
+    }
+} 

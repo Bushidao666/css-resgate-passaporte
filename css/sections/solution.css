@@ -1,0 +1,459 @@
+/* Seção de Solução - Otimizada com Neuromarketing */
+#solucao {
+    background: linear-gradient(145deg, var(--color-accent) 0%, #3A42F2 100%); /* Gradiente mais profundo e envolvente */
+    color: var(--color-white);
+    padding: calc(var(--space-xxl) * 1.2) 0; /* Mais espaço vertical */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        inset 0 -15px 35px rgba(0, 0, 0, 0.25),
+        inset 0 15px 35px rgba(0, 0, 0, 0.15); /* Sombra superior e inferior para profundidade */
+    z-index: 1; /* Garante posicionamento correto no fluxo da página */
+}
+
+/* Efeito de gradiente mais dramático para criar atmosfera de "solução" */
+#solucao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%), /* Mais brilho */
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    z-index: 1;
+    animation: subtle-pulse 15s ease-in-out infinite alternate; /* Animação sutil de "respiração" */
+}
+
+/* Padrão geométrico subliminar que reforça movimento ascendente */
+#solucao::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M0 0L100 100H0V0Z' fill='rgba(255, 255, 255, 0.05)'/%3E%3C/svg%3E");
+    background-position: bottom right;
+    opacity: 0.6; /* Mais visível para criar textura */
+    z-index: 0;
+    animation: subtle-shift 20s linear infinite; /* Movimento mínimo para manter engajamento visual */
+}
+
+#solucao .container {
+    position: relative;
+    z-index: 5;
+}
+
+/* Layout de solução com maior hierarquia visual */
+.solution-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px; /* Maior largura para respiro */
+    margin: 0 auto;
+}
+
+/* Badge de solução com maior contraste e efeito visual */
+.solution-badge {
+    background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+    color: var(--color-primary-dark);
+    font-weight: 800; /* Mais bold */
+    font-size: 0.95rem; /* Ligeiramente maior */
+    padding: 0.6em 1.8em; /* Mais padding */
+    border-radius: 30px;
+    margin-bottom: var(--space-md);
+    box-shadow: 
+        0 8px 20px rgba(255, 188, 10, 0.35),
+        0 0 0 1px rgba(255, 188, 10, 0.4);
+    position: relative;
+    transform: rotate(2deg) translateZ(0);
+    display: inline-block;
+    letter-spacing: 0.03em; /* Mais espaçado */
+    overflow: hidden;
+    text-transform: uppercase; /* Todo em maiúsculas para maior autoridade */
+    font-size: 0.85rem;
+}
+
+/* Efeito de brilho animado na badge - cria percepção de movimento e valor */
+.solution-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
+}
+
+/* Título principal com maior impacto e hierarquia */
+#solucao h2 {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    font-size: clamp(2.4rem, 5vw, 3.2rem); /* Maior */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    max-width: 850px; /* Maior largura */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-weight: 900;
+}
+
+/* Ícone central que atua como âncora visual da solução */
+.solution-icon {
+    width: 140px; /* Maior */
+    height: 140px; /* Maior */
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-xxl); /* Mais espaço abaixo */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.25), /* Sombra mais pronunciada */
+        0 0 0 12px rgba(255, 255, 255, 0.12),
+        0 0 0 1px rgba(255, 188, 10, 0.35);
+    position: relative;
+    z-index: 2;
+    animation: pulse 4s infinite ease-in-out;
+    transform: translateZ(0);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efeito hover no ícone central - reforça interatividade */
+.solution-icon:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Efeitos de círculo concêntrico animado - cria percepção de "poder" */
+.solution-icon::after {
+    content: '';
+    position: absolute;
+    width: 145%;
+    height: 145%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.35); /* Mais visível */
+    animation: spin 30s linear infinite;
+}
+
+.solution-icon::before {
+    content: '';
+    position: absolute;
+    width: 125%;
+    height: 125%;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.25); /* Mais visível */
+    animation: spin 20s linear infinite reverse;
+}
+
+/* Ícone central com maior tamanho e efeito visual */
+.solution-icon i {
+    font-size: 4.2rem; /* Maior */
+    color: var(--color-primary);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25)); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease;
+}
+
+.solution-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* Texto principal com maior legibilidade e impacto */
+#solucao .large-text {
+    color: rgba(255, 255, 255, 0.98); /* Mais visível */
+    font-size: 1.25rem; /* Maior */
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
+}
+
+/* Conteúdo da solução com espaçamento otimizado */
+.solution-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Caixa de destaque com design mais impactante */
+.accent-box {
+    background: rgba(255, 255, 255, 0.12); /* Mais visível */
+    border-radius: 24px; /* Mais arredondado */
+    padding: var(--space-xl) var(--space-xxl);
+    margin: var(--space-xl) 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.15);
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover na caixa de destaque */
+.accent-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Efeitos de fundo para criar textura visual */
+.accent-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 70%);
+    opacity: 0.7;
+    z-index: -1;
+    transform: rotate(15deg);
+}
+
+.accent-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.15; /* Mais visível */
+    z-index: -1;
+    animation: subtle-shift 40s linear infinite; /* Movimento ultra-sutil */
+}
+
+/* Estilização de texto emocional - trigger de empatia */
+.emotive-text {
+    font-size: 1.3rem; /* Maior */
+    font-style: italic;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.98);
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+    position: relative;
+    padding: 0 var(--space-md);
+}
+
+/* Destaque para proposta de valor - ponto focal da seção */
+.value-proposition {
+    font-weight: 600;
+    padding: 0.8em 1.2em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    border-left: 4px solid var(--color-secondary); /* Borda mais grossa */
+    margin-top: var(--space-xl);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+/* Efeito hover na proposta de valor */
+.value-proposition:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Destaque para texto em evidência */
+#solucao .highlight-box {
+    position: relative;
+    z-index: 1;
+}
+
+#solucao .highlight-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    right: -2px;
+    height: 8px;
+    background-color: rgba(255, 188, 10, 0.3);
+    z-index: -1;
+    border-radius: 2px;
+}
+
+/* Destaque para texto com fundo - maior contraste */
+#solucao .highlight-bg {
+    background-color: rgba(255, 188, 10, 0.25);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+/* Lista de características com design mais impactante */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xxl); /* Mais espaço acima */
+    margin-bottom: var(--space-xl);
+}
+
+/* Itens de características com design mais refinado */
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.08); /* Mais visível */
+    padding: var(--space-lg) var(--space-xl); /* Mais padding horizontal */
+    border-radius: 20px; /* Mais arredondado */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(8px); /* Mais efeito de vidro */
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateZ(0);
+}
+
+/* Efeito hover mais pronunciado nos itens de características */
+.feature-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Ícones de características com design mais impactante */
+.feature-icon {
+    width: 60px; /* Maior */
+    height: 60px; /* Maior */
+    min-width: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--space-lg); /* Mais espaço à direita */
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 188, 10, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover mais dramático nos ícones */
+.feature-item:hover .feature-icon {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 
+        0 12px 25px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 188, 10, 0.45);
+}
+
+/* Ícones maiores e mais visíveis */
+.feature-icon i {
+    font-size: 1.8rem; /* Maior */
+    color: var(--color-primary-dark);
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon i {
+    transform: scale(1.1);
+}
+
+/* Texto de características com melhor legibilidade */
+.feature-text {
+    font-weight: 600; /* Mais bold */
+    font-size: 1.15rem; /* Maior */
+    margin: 0;
+    color: var(--color-white);
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+/* Otimizações para responsividade */
+@media (max-width: 991px) {
+    .solution-content {
+        padding: 0 var(--space-md);
+    }
+    
+    .feature-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #solucao h2 {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        padding: 0 var(--space-md);
+    }
+}
+
+@media (max-width: 767px) {
+    .solution-icon {
+        width: 120px;
+        height: 120px;
+        margin-bottom: var(--space-xl);
+    }
+
+    .solution-icon i {
+        font-size: 3.2rem;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    #solucao h2 {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+    }
+    
+    .accent-box {
+        padding: var(--space-lg);
+    }
+    
+    .feature-item {
+        padding: var(--space-md);
+    }
+    
+    #solucao .large-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .emotive-text {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .primary-statement, .action-statement, .emotive-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .solution-badge {
+        font-size: 0.8rem;
+        padding: 0.5em 1.5em;
+    }
+    
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: var(--space-md);
+    }
+    
+    .feature-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .feature-text {
+        font-size: 1rem;
+    }
+    
+    .solution-icon::after,
+    .solution-icon::before {
+        display: none; /* Remove efeitos complexos em telas muito pequenas */
+    }
+} 

@@ -1,0 +1,72 @@
+:root {
+            /* ... (Variáveis CSS mantidas como no original) ... */
+            --color-primary: #141734;
+            --color-primary-dark: #0A0C1A;
+            --color-secondary: #FFBC0A;
+            --color-secondary-dark: #E6A200;
+            --color-secondary-light: #FFF8E1;
+            --color-secondary-highlight-bg: hsla(45, 100%, 86%, 0.7);
+            --color-accent: #5263FF;
+            --color-accent-dark: #3F50E0;
+            --color-text: #282D35;
+            --color-text-light: #555C66;
+            --color-background: #FFFFFF;
+            --color-light-gray: #F9FAFC;
+            --color-medium-gray: #EAEFF5;
+            --color-dark-gray: #404652;
+            --color-success: #00B853;
+            --color-success-light: #E0F8EA;
+            --color-danger: #F23A4E;
+            --color-danger-light: #FDEDEF;
+            --color-white: #ffffff;
+            --color-black: #000000;
+            --color-card-pain-bg: var(--color-danger-light);
+            --color-card-pain-border: hsla(354, 85%, 62%, 0.3);
+            --color-card-pain-icon-bg: var(--color-danger);
+            --color-card-pain-icon-shadow: hsla(354, 85%, 58%, 0.4);
+            --color-card-pain-gradient: linear-gradient(140deg, var(--color-danger), #D42B3D);
+            --color-card-target-bg: #F0F2FF;
+            --color-card-target-border: hsla(234, 100%, 66%, 0.3);
+            --color-card-target-icon-bg: var(--color-accent);
+            --color-card-target-icon-shadow: hsla(234, 100%, 63%, 0.4);
+            --color-card-target-gradient: linear-gradient(140deg, var(--color-accent), #3F50E0);
+            --color-benefit-icon-bg: var(--color-success);
+            --color-benefit-icon-bg-hover: #00A34A;
+            --color-benefit-icon-shadow: hsla(148, 100%, 36%, 0.35);
+            --color-benefit-whatsapp-bg: #25D366;
+            --color-benefit-whatsapp-bg-hover: #1DA851;
+            --color-benefit-whatsapp-shadow: hsla(145, 65%, 45%, 0.35);
+            --color-input-bg: hsla(230, 25%, 18%, 0.88);
+            --color-input-border: hsla(0, 0%, 100%, 0.2);
+            --color-input-focus-border: var(--color-secondary);
+            --color-input-focus-shadow: hsla(46, 100%, 52%, 0.4);
+            --color-input-invalid-border: #FF7080;
+            --color-input-invalid-bg: hsla(354, 85%, 58%, 0.1);
+            --color-input-invalid-focus-shadow: hsla(354, 85%, 62%, 0.4);
+            --color-placeholder: hsla(0, 0%, 100%, 0.55);
+            --color-label: var(--color-placeholder);
+            --color-label-focus: var(--color-white);
+            --color-label-icon: var(--color-secondary);
+            --color-label-icon-focus: var(--color-white);
+            --color-label-float-bg: hsla(230, 18%, 22%, 0.98);
+            --color-label-invalid: #FFD4D9;
+            --color-label-icon-invalid: var(--color-input-invalid-border);
+
+            --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-headings: 'Poppins', sans-serif;
+            
+            /* Novos valores para espaçamento e layout */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-xxl: 3rem;
+            --space-xxxl: 5rem;
+            
+            /* Breakpoints */
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+        } 

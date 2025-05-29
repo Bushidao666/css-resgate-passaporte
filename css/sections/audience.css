@@ -1,0 +1,675 @@
+/* Audience Styles */
+.audience-title::after {
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    box-shadow: 0 1px 2px rgba(82, 99, 255, 0.2);
+}
+
+.audience-intro {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
+}
+
+.audience-focus {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.audience-persona {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.audience-qualifier {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.audience-hook {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-secondary);
+}
+
+/* =============================================================================
+   SEÇÃO PÚBLICO-ALVO - OTIMIZADA PARA IDENTIFICAÇÃO E CONVERSÃO
+   Aplicando Psicologia de Pertencimento + Identificação Emocional + Gatilhos Visuais
+   ============================================================================= */
+
+/* ----------------------------------------
+   CONTAINER PRINCIPAL - AMBIENTE IMERSIVO
+   ---------------------------------------- */
+#publico {
+    background: linear-gradient(135deg, 
+        var(--color-primary) 0%, 
+        #1A1D3E 50%,
+        var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    padding: calc(var(--space-xxl) * 1.3) 0;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: 
+        inset 0 -20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Patterns Complexos para Profundidade */
+#publico::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    bottom: -10%;
+    left: -10%;
+    background-image: 
+        radial-gradient(circle at 15% 25%, rgba(82, 99, 255, 0.2) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(255, 188, 10, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 50% 10%, rgba(0, 184, 83, 0.08) 0%, transparent 40%),
+        linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.02) 50%, transparent 70%);
+    z-index: -2;
+    opacity: 0.9;
+    animation: subtle-background-shift 40s ease-in-out infinite alternate;
+}
+
+/* Elemento Floating Animado */
+#publico::after {
+    content: '';
+    position: absolute;
+    right: -250px;
+    bottom: -250px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(82, 99, 255, 0.18) 0%, 
+        rgba(82, 99, 255, 0.08) 40%,
+        transparent 70%);
+    z-index: -1;
+    animation: floating-orb 20s ease-in-out infinite;
+    filter: blur(1px);
+}
+
+/* Container Principal */
+#publico .container {
+    position: relative;
+    z-index: 5;
+}
+
+/* ----------------------------------------
+   CABEÇALHO DA SEÇÃO - IMPACTO EMOCIONAL
+   ---------------------------------------- */
+.target-header {
+    text-align: center;
+    margin-bottom: calc(var(--space-xxl) * 1.2);
+    position: relative;
+    z-index: 3;
+}
+
+/* Badge Identificador - Gatilho de Pertencimento */
+.target-badge {
+    background: linear-gradient(135deg, 
+        var(--color-accent) 0%, 
+        var(--color-accent-dark) 100%);
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 0.7em 2em;
+    border-radius: 50px;
+    margin-bottom: var(--space-lg);
+    display: inline-block;
+    transform: rotate(-1.5deg) translateZ(0);
+    box-shadow: 
+        0 8px 25px rgba(82, 99, 255, 0.35),
+        0 0 0 1px rgba(82, 99, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.target-badge:hover {
+    transform: rotate(0deg) scale(1.06) translateZ(0);
+    box-shadow: 
+        0 15px 40px rgba(82, 99, 255, 0.45),
+        0 0 0 1px rgba(82, 99, 255, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Efeito Shimmer Cativante */
+.target-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.5), 
+        transparent);
+    animation: shimmer 3.5s infinite;
+}
+
+/* Título Principal - Conexão Emocional */
+.audience-title {
+    color: var(--color-white);
+    -webkit-text-fill-color: var(--color-white);
+    background: none;
+    margin-bottom: var(--space-lg);
+    font-weight: 900;
+    font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+    text-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sublinhado Dinâmico */
+.audience-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--color-accent) 0%, 
+        var(--color-secondary) 50%,
+        var(--color-accent-dark) 100%);
+    border-radius: 4px;
+    box-shadow: 
+        0 2px 8px rgba(82, 99, 255, 0.3),
+        0 0 15px rgba(82, 99, 255, 0.2);
+    animation: title-pulse 3s ease-in-out infinite alternate;
+}
+
+/* Texto Destacado */
+.audience-title .text-highlight {
+    position: relative;
+    color: var(--color-secondary);
+    font-style: normal;
+    font-weight: 900;
+    text-shadow: 
+        0 3px 6px rgba(255, 188, 10, 0.4),
+        0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------------------------------
+   INTRODUÇÃO - IDENTIFICAÇÃO PROGRESSIVA
+   ---------------------------------------- */
+.target-intro {
+    max-width: 950px;
+    margin: 0 auto calc(var(--space-xxl) * 1.3);
+    position: relative;
+    z-index: 3;
+}
+
+.target-intro-content {
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.04) 50%,
+        rgba(255, 255, 255, 0.08) 100%);
+    border-radius: 28px;
+    padding: calc(var(--space-xxl) * 1.2) calc(var(--space-xxl) * 1.5);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.target-intro-content:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        0 30px 70px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Background Pattern Sutil */
+.target-intro-content::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 0.12) 0%, 
+        transparent 60%);
+    opacity: 0.4;
+    z-index: -1;
+    transform: rotate(25deg);
+    animation: subtle-rotation 30s linear infinite;
+}
+
+/* Tipografia da Introdução - Hierarquia Emocional */
+.audience-intro {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+}
+
+/* Spans com Propósito Psicológico */
+.audience-focus {
+    font-weight: 700;
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.audience-persona {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.audience-qualifier {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.audience-hook {
+    font-weight: 800;
+    font-style: italic;
+    color: var(--color-secondary);
+    text-shadow: 
+        0 2px 4px rgba(255, 188, 10, 0.4),
+        0 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Destaque Numérico - Âncora Visual */
+.target-highlight {
+    display: inline-block;
+    background: linear-gradient(135deg, 
+        var(--color-secondary) 0%, 
+        var(--color-secondary-dark) 100%);
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    padding: 0.35em 0.8em;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 
+        0 4px 12px rgba(255, 188, 10, 0.4),
+        0 0 0 1px rgba(255, 188, 10, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    margin: 0 0.2em;
+    letter-spacing: 0.02em;
+    text-shadow: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    animation: value-pulse 4s ease-in-out infinite;
+}
+
+.target-highlight:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 6px 18px rgba(255, 188, 10, 0.5),
+        0 0 0 1px rgba(255, 188, 10, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ----------------------------------------
+   CARDS DE IDENTIFICAÇÃO - PSICOLOGIA APLICADA
+   ---------------------------------------- */
+.target-cards-container {
+    margin-bottom: calc(var(--space-xxl) * 1.3);
+    position: relative;
+    z-index: 3;
+}
+
+/* Cards Individuais - Máxima Identificação */
+.target-card {
+    position: relative;
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.06) 0%,
+        rgba(255, 255, 255, 0.02) 50%,
+        rgba(255, 255, 255, 0.06) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        0 18px 40px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    border-radius: 24px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateZ(0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    /* Delay sequencial das animações */
+    animation-delay: calc(var(--card-delay, 0) * 100ms);
+}
+
+.target-card:hover {
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(255, 255, 255, 0.1) 100%);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-15px) scale(1.02);
+}
+
+/* Ícone Badge Floating - Elemento Focal */
+.target-icon-badge {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+        var(--color-accent) 0%, 
+        var(--color-accent-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 12px 30px rgba(82, 99, 255, 0.4),
+        0 0 0 2px rgba(82, 99, 255, 0.4),
+        0 0 0 6px rgba(255, 255, 255, 0.1),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    z-index: 4;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Órbita Animada ao Redor do Ícone */
+.target-icon-badge::before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    animation: orbit-spin 15s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.target-card:hover .target-icon-badge::before {
+    opacity: 1;
+}
+
+.target-card:hover .target-icon-badge {
+    transform: translateX(-50%) scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, 
+        var(--color-secondary) 0%, 
+        var(--color-secondary-dark) 100%);
+    box-shadow: 
+        0 15px 35px rgba(255, 188, 10, 0.4),
+        0 0 0 2px rgba(255, 188, 10, 0.4),
+        0 0 0 8px rgba(255, 255, 255, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.target-icon-badge i {
+    color: var(--color-white);
+    font-size: 1.9rem;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.target-card:hover .target-icon-badge i {
+    color: var(--color-primary-dark);
+    transform: scale(1.1);
+}
+
+/* Conteúdo dos Cards */
+.target-card-content {
+    padding-top: calc(var(--space-xxl) + 15px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding-bottom: calc(var(--space-xl) * 1.2);
+    padding-left: calc(var(--space-xl) * 1.2);
+    padding-right: calc(var(--space-xl) * 1.2);
+}
+
+/* Wrapper do Ícone Secundário (Removido para simplificar) */
+.target-card .card-icon-wrapper {
+    display: none;
+}
+
+/* Títulos dos Cards - Impacto Emocional */
+.target-card h4 {
+    color: var(--color-white);
+    font-size: 1.35rem;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    font-weight: 800;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.4s ease;
+}
+
+.target-card:hover h4 {
+    color: var(--color-secondary);
+    text-shadow: 
+        0 3px 6px rgba(255, 188, 10, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Descrições dos Cards - Identificação Sutil */
+.target-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.4s ease;
+}
+
+.target-card:hover p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* ----------------------------------------
+   RESPONSIVIDADE ESTRATÉGICA
+   ---------------------------------------- */
+@media (max-width: 991px) {
+    #publico {
+        padding: var(--space-xxl) 0;
+    }
+    
+    .target-intro-content {
+        padding: var(--space-xl) calc(var(--space-xl) * 1.2);
+    }
+    
+    .audience-intro {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    #publico {
+        padding: calc(var(--space-xl) * 1.5) 0;
+    }
+    
+    .target-header {
+        margin-bottom: var(--space-xl);
+    }
+    
+    .audience-title {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+    }
+    
+    .target-intro {
+        margin-bottom: var(--space-xl);
+    }
+    
+    .audience-intro {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    
+    .audience-focus, 
+    .audience-persona, 
+    .audience-qualifier, 
+    .audience-hook {
+        display: block;
+    }
+    
+    .target-intro-content {
+        padding: var(--space-xl);
+        border-radius: 20px;
+    }
+    
+    .target-cards-container {
+        margin-bottom: var(--space-xl);
+    }
+    
+    .target-card {
+        border-radius: 20px;
+    }
+    
+    .target-icon-badge {
+        width: 60px;
+        height: 60px;
+        top: -25px;
+    }
+    
+    .target-icon-badge i {
+        font-size: 1.6rem;
+    }
+    
+    .target-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .target-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .target-intro-content {
+        padding: var(--space-lg);
+    }
+    
+    .audience-intro {
+        font-size: 1rem;
+    }
+    
+    .target-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .target-card p {
+        font-size: 0.95rem;
+    }
+    
+    .target-card-content {
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+        padding-bottom: var(--space-lg);
+    }
+}
+
+/* ----------------------------------------
+   ANIMAÇÕES CUSTOMIZADAS
+   ---------------------------------------- */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes title-pulse {
+    0% { width: 140px; opacity: 0.8; }
+    50% { width: 160px; opacity: 1; }
+    100% { width: 140px; opacity: 0.8; }
+}
+
+@keyframes value-pulse {
+    0%, 100% { 
+        box-shadow: 
+            0 4px 12px rgba(255, 188, 10, 0.4),
+            0 0 0 1px rgba(255, 188, 10, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    50% { 
+        box-shadow: 
+            0 6px 18px rgba(255, 188, 10, 0.6),
+            0 0 0 1px rgba(255, 188, 10, 0.6),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes subtle-background-shift {
+    0%, 100% { 
+        transform: translateX(0) translateY(0) rotate(0deg); 
+        opacity: 0.9; 
+    }
+    25% { 
+        transform: translateX(3px) translateY(-3px) rotate(0.5deg); 
+        opacity: 0.95; 
+    }
+    50% { 
+        transform: translateX(-2px) translateY(2px) rotate(-0.3deg); 
+        opacity: 1; 
+    }
+    75% { 
+        transform: translateX(2px) translateY(3px) rotate(0.2deg); 
+        opacity: 0.85; 
+    }
+}
+
+@keyframes floating-orb {
+    0%, 100% { 
+        transform: translateY(0) scale(1); 
+        opacity: 0.6; 
+    }
+    50% { 
+        transform: translateY(-20px) scale(1.05); 
+        opacity: 0.8; 
+    }
+}
+
+@keyframes subtle-rotation {
+    from { transform: rotate(25deg); }
+    to { transform: rotate(385deg); }
+}
+
+@keyframes orbit-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

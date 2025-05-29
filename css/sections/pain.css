@@ -1,0 +1,342 @@
+/* Seção de Dores/Problemas - Otimizada com Neuromarketing */
+.hero-adjacent {
+    position: relative;
+    padding: calc(var(--space-xxl) * 1.2) 0; /* Espaço vertical aumentado */
+    background-color: var(--color-light-gray);
+    overflow: hidden;
+    box-shadow: 
+        inset 0 8px 20px rgba(0, 0, 0, 0.07),
+        inset 0 -8px 20px rgba(0, 0, 0, 0.04); /* Sombra mais pronunciada para profundidade */
+}
+
+/* Linha de destaque superior - emocionalmente conectada ao tema de "problemas" */
+.hero-adjacent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--color-danger) 0%, var(--color-accent) 100%);
+    opacity: 0.9; /* Mais visível */
+    box-shadow: 0 3px 10px rgba(242, 58, 78, 0.25); /* Sombra intensificada */
+}
+
+/* Header da seção com maior impacto visual */
+.pain-section-header {
+    text-align: center;
+    max-width: 820px; /* Ligeiramente maior */
+    margin: 0 auto var(--space-xl);
+    position: relative;
+}
+
+.section-intro {
+    margin-bottom: var(--space-xl); /* Mais espaço */
+}
+
+.section-intro p {
+    font-size: 1.15rem; /* Ligeiramente maior */
+    color: var(--color-text-light);
+    max-width: 720px; /* Aumentado */
+    margin: var(--space-lg) auto;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    position: relative;
+}
+
+/* Destaque sutil para a seção de problemas */
+.section-intro p .text-accent {
+    color: var(--color-primary);
+    font-weight: 700;
+    position: relative;
+    padding: 0 0.15em;
+}
+
+.section-intro p .text-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-color: rgba(242, 58, 78, 0.1);
+    border-radius: 3px;
+    z-index: -1;
+}
+
+/* Grid de cards de dor - núcleo da seção para identificação do usuário */
+.pain-cards {
+    margin-top: var(--space-xxl); /* Mais espaçamento vertical */
+    margin-bottom: var(--space-xl); /* Espaço adicional abaixo */
+}
+
+/* Cards com design de neurociência aplicada */
+.card::before { /* Destaque superior visualmente conectado com perigo/dor */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-card-pain-gradient);
+    opacity: 0.8; /* Ligeiramente mais visível */
+    transition: all 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+    height: 8px; /* Mais alto no hover para maior impacto */
+}
+
+/* Numeração estratégica - ordem mental e sequenciamento */
+.card-counter {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(242, 58, 78, 0.12);
+    color: var(--color-danger);
+    font-size: 0.9rem; /* Ligeiramente maior */
+    font-weight: 800;
+    width: 30px; /* Maior */
+    height: 30px; /* Maior */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    border: 1px solid rgba(242, 58, 78, 0.18);
+    box-shadow: 
+        0 3px 8px rgba(242, 58, 78, 0.15),
+        0 0 0 1px rgba(242, 58, 78, 0.08); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .card-counter {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 
+        0 5px 12px rgba(242, 58, 78, 0.25),
+        0 0 0 1px rgba(242, 58, 78, 0.15);
+}
+
+/* Ícones com maior impacto visual - gatilhos de reconhecimento */
+.pain-cards .card-icon-wrapper {
+    background: var(--color-card-pain-gradient);
+    box-shadow: 
+        0 10px 20px rgba(242, 58, 78, 0.3),
+        0 0 0 1px rgba(242, 58, 78, 0.25);
+    width: 75px; /* Maior */
+    height: 75px; /* Maior */
+    transform: translateZ(0);
+}
+
+/* Variação estratégica de cores para diferenciação visual */
+.pain-cards .card:nth-child(1) .card-icon-wrapper {
+    background: linear-gradient(135deg, #FF7080 0%, #F23A4E 100%);
+}
+
+.pain-cards .card:nth-child(2) .card-icon-wrapper {
+    background: linear-gradient(135deg, #FF9580 0%, #F25A3A 100%);
+}
+
+.pain-cards .card:nth-child(3) .card-icon-wrapper {
+    background: linear-gradient(135deg, #5572FF 0%, #3A42F2 100%);
+}
+
+.pain-cards .card:nth-child(4) .card-icon-wrapper {
+    background: linear-gradient(135deg, #56D9FF 0%, #3A9EF2 100%);
+}
+
+.pain-cards .card:nth-child(5) .card-icon-wrapper {
+    background: linear-gradient(135deg, #FFA641 0%, #F25A0C 100%);
+}
+
+/* Título dos cards mais expressivo */
+.pain-cards .card-title {
+    font-size: 1.3rem; /* Maior */
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-md);
+    line-height: 1.25;
+    position: relative;
+    display: inline-block;
+}
+
+/* Destacando os ícones dos cards */
+.pain-cards .card-icon {
+    color: var(--color-white);
+    font-size: 2rem; /* Maior */
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+/* Descrição dos cards mais legível */
+.pain-cards .card-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+}
+
+/* Destaque especial para abreviações */
+.pain-cards .card-description abbr {
+    font-weight: 700;
+    color: var(--color-primary);
+    border-bottom: 1px dotted var(--color-danger);
+    cursor: help;
+    transition: all 0.2s ease;
+}
+
+.pain-cards .card-description abbr:hover {
+    background-color: rgba(242, 58, 78, 0.08);
+    color: var(--color-danger);
+}
+
+/* Subtítulo opcional abaixo dos cards */
+.tagline {
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    margin-top: -0.5em;
+    margin-bottom: 1.8em;
+    font-style: italic;
+}
+
+/* Bloco de citação com design de maior autoridade */
+.pain-quote {
+    position: relative;
+    background: rgba(242, 58, 78, 0.04); /* Fundo ligeiramente mais visível */
+    border-radius: 20px; /* Mais arredondado */
+    padding: var(--space-xl) var(--space-xxl); /* Mais espaço horizontal */
+    border-left: 5px solid var(--color-danger); /* Borda mais grossa */
+    max-width: 920px; /* Ligeiramente maior */
+    margin: var(--space-xl) auto var(--space-lg); /* Ajuste nos espaçamentos */
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.05),
+        0 0 0 1px rgba(242, 58, 78, 0.15);
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pain-quote:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(242, 58, 78, 0.2);
+}
+
+/* Aspas decorativas mais dramáticas */
+.pain-quote::before {
+    content: '"';
+    position: absolute;
+    top: -30px; /* Mais alto */
+    left: -15px; /* Mais à esquerda */
+    font-size: 120px; /* Maior */
+    color: rgba(242, 58, 78, 0.12); /* Ligeiramente mais visível */
+    font-family: var(--font-headings);
+    line-height: 1;
+    z-index: 0;
+}
+
+/* Texto da citação com maior destaque */
+.pain-quote p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.15rem; /* Maior */
+    margin-bottom: 0;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* Estilização da tag de seção */
+.pain-section-header .section-tag {
+    font-size: 0.9rem;
+    padding: 0.5em 1.6em;
+    transform: rotate(-3deg) translateZ(0);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.04em;
+}
+
+/* Destaque para texto enfatizado dentro da citação */
+.pain-quote .font-bold {
+    color: var(--color-primary);
+    font-weight: 800;
+    position: relative;
+}
+
+/* Caixa de destaque dentro da citação */
+.pain-quote .highlight-box {
+    position: relative;
+    z-index: 1;
+}
+
+.pain-quote .highlight-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    right: -2px;
+    height: 10px;
+    background-color: rgba(242, 58, 78, 0.15);
+    z-index: -1;
+    border-radius: 2px;
+}
+
+/* Alinhamento central para texto */
+.centered-text {
+    text-align: center;
+}
+
+/* Ajustes de responsividade para maior eficácia */
+@media (min-width: 992px) {
+    .pain-cards .card {
+        padding: var(--space-xl) var(--space-lg);
+    }
+    
+    .pain-cards .card:hover {
+        transform: translateY(-12px); /* Movimento mais pronunciado em telas maiores */
+    }
+}
+
+@media (max-width: 767px) {
+    .pain-section-header h2 {
+        font-size: 1.9rem;
+    }
+    
+    .pain-quote {
+        padding: var(--space-lg);
+        margin: var(--space-lg) auto;
+    }
+    
+    .section-intro p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+    
+    .pain-cards .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pain-point, .solution-point, .benefit-point {
+        padding-left: 1.6em;
+    }
+    
+    .pain-quote p {
+        font-size: 1.05rem;
+    }
+    
+    .card-counter {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+    
+    .pain-cards .card-icon-wrapper {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .pain-cards .card-icon {
+        font-size: 1.7rem;
+    }
+} 

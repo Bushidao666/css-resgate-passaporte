@@ -1,0 +1,678 @@
+/* =============================================================================
+   SEÇÃO CTA/RESGATE - OTIMIZADA PARA CONVERSÃO MÁXIMA
+   Aplicando Urgência Psicológica + Redução de Fricção + Hierarquia de Conversão
+   ============================================================================= */
+
+/* ----------------------------------------
+   CONTAINER PRINCIPAL - AMBIENTE DE CONVERSÃO
+   ---------------------------------------- */
+#resgate {
+    background: linear-gradient(135deg, 
+        var(--color-primary) 0%, 
+        #1A1D3E 30%,
+        var(--color-primary-dark) 70%,
+        #0F1129 100%);
+    color: var(--color-white);
+    padding: calc(var(--space-xxl) * 1.5) 0;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: 
+        inset 0 15px 40px rgba(0, 0, 0, 0.4),
+        inset 0 -20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Pattern Complexo - Ambiente Imersivo */
+#resgate::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    right: -15%;
+    bottom: -15%;
+    left: -15%;
+    background-image: 
+        radial-gradient(circle at 8% 15%, rgba(82, 99, 255, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 92% 85%, rgba(255, 188, 10, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 45% 5%, rgba(0, 184, 83, 0.08) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M40 38v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v8h-4v2h4v4h2v-4h4V8h-4zM8 38v-4H6v4H2v2h4v4h2v-4h4v-2H8zM8 8V0H6v8H2v2h4v4h2v-4h4V8H8z'/%3E%3C/g%3E%3C/svg%3E");
+    z-index: -2;
+    opacity: 0.8;
+    animation: background-pulse 35s ease-in-out infinite alternate;
+}
+
+/* Spotlight Effect Focal */
+#resgate::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 188, 10, 0.08) 0%,
+        rgba(255, 188, 10, 0.04) 30%,
+        transparent 70%);
+    z-index: -1;
+    animation: spotlight-pulse 8s ease-in-out infinite;
+    filter: blur(2px);
+}
+
+/* Container Principal */
+#resgate .container {
+    position: relative;
+    z-index: 5;
+}
+
+/* Wrapper CTA - Posicionamento Correto */
+.cta-wrapper {
+    position: relative;
+    z-index: 4;
+}
+
+/* ----------------------------------------
+   CABEÇALHO CTA - MÁXIMO IMPACTO PSICOLÓGICO
+   ---------------------------------------- */
+.cta-header {
+    text-align: center;
+    margin-bottom: calc(var(--space-xxl) * 1.3);
+    position: relative;
+    z-index: 3;
+}
+
+/* Badge de Tempo - Gatilho de Urgência */
+.cta-time-badge {
+    background: linear-gradient(135deg, 
+        var(--color-secondary) 0%, 
+        var(--color-secondary-dark) 100%);
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 0.8em 2.2em;
+    border-radius: 50px;
+    margin-bottom: var(--space-lg);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    box-shadow: 
+        0 10px 30px rgba(255, 188, 10, 0.4),
+        0 0 0 1px rgba(255, 188, 10, 0.5),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    transform: rotate(-1deg) translateZ(0);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: urgency-pulse 3s ease-in-out infinite;
+}
+
+.cta-time-badge:hover {
+    transform: rotate(0deg) scale(1.05) translateZ(0);
+    box-shadow: 
+        0 15px 40px rgba(255, 188, 10, 0.5),
+        0 0 0 1px rgba(255, 188, 10, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.cta-time-badge i {
+    font-size: 1.1em;
+    animation: tick-pulse 2s ease-in-out infinite;
+}
+
+/* Efeito Shimmer de Urgência */
+.cta-time-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.6), 
+        transparent);
+    animation: urgency-shimmer 4s infinite;
+}
+
+/* Título Principal CTA - Conversão Focada */
+.cta-title,
+#resgate h2.section-title {
+    color: var(--color-white) !important;
+    -webkit-text-fill-color: var(--color-white) !important;
+    background: none !important;
+    font-size: clamp(2.4rem, 6vw, 3.5rem) !important;
+    line-height: 1.15 !important;
+    text-shadow: 
+        0 5px 10px rgba(0, 0, 0, 0.4),
+        0 2px 5px rgba(0, 0, 0, 0.3) !important;
+    letter-spacing: -0.02em !important;
+    max-width: 900px !important;
+    margin: 0 auto var(--space-lg) !important;
+    font-weight: 900 !important;
+    font-family: 'Poppins', sans-serif !important;
+    position: relative;
+}
+
+/* Sublinhado Dinâmico CTA */
+.cta-title::after,
+#resgate h2.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 5px;
+    background: linear-gradient(90deg, 
+        var(--color-secondary) 0%, 
+        var(--color-accent) 50%,
+        var(--color-secondary) 100%);
+    border-radius: 5px;
+    box-shadow: 
+        0 3px 10px rgba(255, 188, 10, 0.4),
+        0 0 20px rgba(255, 188, 10, 0.3);
+    animation: cta-title-pulse 2.5s ease-in-out infinite alternate;
+}
+
+/* Texto Destacado CTA */
+.cta-title .text-highlight,
+#resgate .text-highlight {
+    position: relative;
+    color: var(--color-secondary) !important;
+    font-style: normal;
+    font-weight: 900;
+    text-shadow: 
+        0 4px 8px rgba(255, 188, 10, 0.5),
+        0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Copy Persuasivo */
+.cta-copy {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content .primary-statement {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+    text-align: center;
+}
+
+.cta-content .action-statement {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.15rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.urgency-trigger {
+    background: linear-gradient(135deg, 
+        rgba(255, 188, 10, 0.2) 0%, 
+        rgba(255, 188, 10, 0.1) 100%);
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    border: 1px solid rgba(255, 188, 10, 0.3);
+    position: relative;
+    animation: urgency-glow 3s ease-in-out infinite;
+}
+
+/* ----------------------------------------
+   GRID DE FEATURES - CONFIANÇA E VALOR
+   ---------------------------------------- */
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: calc(var(--space-xl) * 1.2);
+    margin: calc(var(--space-xxl) * 1.2) 0;
+    position: relative;
+    z-index: 3;
+}
+
+/* Features Individuais - Prova de Valor */
+.cta-feature {
+    text-align: center;
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.04) 50%,
+        rgba(255, 255, 255, 0.08) 100%);
+    border-radius: 20px;
+    padding: calc(var(--space-xl) * 1.2);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    transform: translateZ(0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-feature:hover {
+    transform: translateY(-12px) scale(1.03);
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.12) 100%);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Borda Animada nas Features */
+.cta-feature::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--color-secondary) 0%, 
+        var(--color-accent) 50%,
+        var(--color-success) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 0 0 20px 20px;
+}
+
+.cta-feature:hover::before {
+    transform: scaleX(1);
+}
+
+/* Ícones das Features */
+.cta-feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+        var(--color-secondary) 0%, 
+        var(--color-secondary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto calc(var(--space-lg) * 1.2);
+    box-shadow: 
+        0 12px 30px rgba(255, 188, 10, 0.3),
+        0 0 0 2px rgba(255, 188, 10, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+/* Órbita Animada nos Ícones */
+.cta-feature-icon::before {
+    content: '';
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 188, 10, 0.4);
+    animation: feature-orbit 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cta-feature:hover .cta-feature-icon::before {
+    opacity: 1;
+}
+
+.cta-feature:hover .cta-feature-icon {
+    transform: scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, 
+        var(--color-accent) 0%, 
+        var(--color-accent-dark) 100%);
+    box-shadow: 
+        0 15px 40px rgba(82, 99, 255, 0.3),
+        0 0 0 2px rgba(82, 99, 255, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.cta-feature-icon i {
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+    transition: all 0.4s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.cta-feature:hover .cta-feature-icon i {
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+/* Títulos das Features */
+.cta-feature-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: var(--space-md);
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.4s ease;
+}
+
+.cta-feature:hover .cta-feature-title {
+    color: var(--color-secondary);
+}
+
+/* Descrições das Features */
+.cta-feature-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    font-weight: 500;
+    transition: color 0.4s ease;
+}
+
+.cta-feature:hover .cta-feature-description {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* ----------------------------------------
+   ELEMENTOS FLUTUANTES - IMERSÃO VISUAL
+   ---------------------------------------- */
+.cta-floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-element {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(255, 188, 10, 0.1) 0%, 
+        transparent 70%);
+    animation: float-around 20s ease-in-out infinite;
+    filter: blur(1px);
+}
+
+.floating-element:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+}
+
+.floating-element:nth-child(2) {
+    top: 20%;
+    right: 8%;
+    animation-delay: 5s;
+    animation-duration: 30s;
+}
+
+.floating-element:nth-child(3) {
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 10s;
+    animation-duration: 22s;
+}
+
+.floating-element:nth-child(4) {
+    bottom: 25%;
+    right: 12%;
+    animation-delay: 15s;
+    animation-duration: 28s;
+}
+
+/* Spotlight Central */
+.cta-spotlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 188, 10, 0.04) 0%,
+        transparent 60%);
+    z-index: 1;
+    animation: spotlight-breathe 6s ease-in-out infinite;
+    filter: blur(3px);
+}
+
+/* ----------------------------------------
+   INTEGRAÇÃO COM FORMULÁRIO
+   ---------------------------------------- */
+#resgate .cta-form-container {
+    position: relative;
+    z-index: 10;
+    margin-top: calc(var(--space-xxl) * 1.2);
+}
+
+#resgate .capture-form {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.4),
+        0 0 0 2px rgba(255, 255, 255, 0.1),
+        0 0 0 10px rgba(255, 188, 10, 0.1),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+#resgate .cta-form-glow {
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 188, 10, 0.3) 0%, 
+        rgba(255, 188, 10, 0.15) 40%,
+        transparent 75%);
+    filter: blur(25px);
+    transform: scale(1.1);
+}
+
+#resgate .cta-button {
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 1.2em 2em;
+    margin-top: var(--space-lg);
+    position: relative;
+    z-index: 15;
+}
+
+/* ----------------------------------------
+   RESPONSIVIDADE ESTRATÉGICA
+   ---------------------------------------- */
+@media (max-width: 991px) {
+    #resgate {
+        padding: var(--space-xxl) 0;
+    }
+    
+    .cta-header {
+        margin-bottom: var(--space-xxl);
+    }
+    
+    .cta-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--space-xl);
+        margin: var(--space-xxl) 0;
+    }
+    
+    .cta-feature {
+        padding: var(--space-xl);
+    }
+}
+
+@media (max-width: 767px) {
+    #resgate {
+        padding: calc(var(--space-xl) * 1.5) 0;
+    }
+    
+    .cta-title,
+    #resgate h2.section-title {
+        font-size: clamp(2rem, 7vw, 2.8rem) !important;
+    }
+    
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        margin: var(--space-xl) 0;
+    }
+    
+    .cta-time-badge {
+        font-size: 0.9rem;
+        padding: 0.7em 1.8em;
+    }
+    
+    .cta-content .primary-statement {
+        font-size: 1.1rem;
+    }
+    
+    .cta-content .action-statement {
+        font-size: 1.05rem;
+    }
+    
+    .floating-element {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-feature {
+        padding: var(--space-lg);
+    }
+    
+    .cta-feature-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .cta-feature-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .floating-element {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ----------------------------------------
+   ANIMAÇÕES CUSTOMIZADAS
+   ---------------------------------------- */
+@keyframes urgency-pulse {
+    0%, 100% { 
+        box-shadow: 
+            0 10px 30px rgba(255, 188, 10, 0.4),
+            0 0 0 1px rgba(255, 188, 10, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    }
+    50% { 
+        box-shadow: 
+            0 15px 40px rgba(255, 188, 10, 0.6),
+            0 0 0 1px rgba(255, 188, 10, 0.7),
+            inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes tick-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes urgency-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes cta-title-pulse {
+    0% { width: 160px; opacity: 0.8; }
+    50% { width: 180px; opacity: 1; }
+    100% { width: 160px; opacity: 0.8; }
+}
+
+@keyframes urgency-glow {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(255, 188, 10, 0.3); 
+        background: linear-gradient(135deg, 
+            rgba(255, 188, 10, 0.2) 0%, 
+            rgba(255, 188, 10, 0.1) 100%);
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(255, 188, 10, 0.5); 
+        background: linear-gradient(135deg, 
+            rgba(255, 188, 10, 0.3) 0%, 
+            rgba(255, 188, 10, 0.2) 100%);
+    }
+}
+
+@keyframes feature-orbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes background-pulse {
+    0%, 100% { 
+        opacity: 0.8; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.9; 
+        transform: scale(1.02); 
+    }
+}
+
+@keyframes spotlight-pulse {
+    0%, 100% { 
+        opacity: 0.6; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: translate(-50%, -50%) scale(1.05); 
+    }
+}
+
+@keyframes float-around {
+    0%, 100% { 
+        transform: translateY(0) translateX(0) rotate(0deg); 
+        opacity: 0.4; 
+    }
+    25% { 
+        transform: translateY(-20px) translateX(10px) rotate(90deg); 
+        opacity: 0.7; 
+    }
+    50% { 
+        transform: translateY(-10px) translateX(-15px) rotate(180deg); 
+        opacity: 0.5; 
+    }
+    75% { 
+        transform: translateY(-30px) translateX(5px) rotate(270deg); 
+        opacity: 0.6; 
+    }
+}
+
+@keyframes spotlight-breathe {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    50% { 
+        opacity: 0.5; 
+        transform: translate(-50%, -50%) scale(1.1); 
+    }
+} 

@@ -1,0 +1,110 @@
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: var(--space-lg);
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    letter-spacing: -0.015em;
+}
+
+p {
+    margin-bottom: var(--space-lg);
+}
+
+.large-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.text-block {
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.highlight-box {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-box::after {
+    content: '';
+    position: absolute;
+    bottom: -0.1em;
+    left: -0.15em;
+    right: -0.15em;
+    height: 0.3em;
+    background-color: var(--color-secondary-highlight-bg);
+    z-index: -1;
+    transform: rotate(-1deg);
+}
+
+.text-highlight {
+    position: relative;
+    color: var(--color-secondary);
+    -webkit-text-fill-color: var(--color-secondary); /* ADDED for explicit fill */
+    font-style: normal;
+    font-weight: 800;
+    z-index: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: -0.1em;
+    right: -0.1em;
+    height: 0.3em;
+    background-color: var(--color-secondary-highlight-bg);
+    z-index: -1;
+    transform: rotate(-1deg);
+    opacity: 0.85;
+    border-radius: 2px;
+}
+
+.text-accent {
+    color: var(--color-primary);
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.text-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: -0.1em;
+    right: -0.1em;
+    height: 0.3em;
+    background-color: rgba(82, 99, 255, 0.1);
+    z-index: -1;
+    border-radius: 2px;
+}
+
+.highlight-bg {
+    background: linear-gradient(transparent 40%, var(--color-secondary-highlight-bg) 40%);
+    padding: 0 0.2em;
+    position: relative;
+    display: inline;
+    font-weight: 700;
+    color: var(--color-white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+} 

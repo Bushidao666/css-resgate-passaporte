@@ -1,0 +1,321 @@
+/* CSS Principal - Resgate Passaporte */
+
+/* Base (Ordem Importa) */
+@import url('base/variables.css');
+@import url('base/reset.css');
+@import url('base/typography.css');
+@import url('base/utilities.css');
+@import url('base/animations.css');
+
+/* Componentes */
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+
+/* Seções (Ordem Sugerida da Página) */
+@import url('sections/hero.css');
+@import url('sections/pain.css'); 
+@import url('sections/solution.css');
+@import url('sections/benefits.css');
+@import url('sections/audience.css');
+@import url('sections/tools.css'); 
+@import url('sections/conversion.css');
+@import url('sections/financial.css');
+@import url('sections/vip.css');
+@import url('sections/cta.css');
+@import url('sections/footer.css');
+
+/* JavaScript Interactivity Styles (se necessário, podem ser divididos também) */
+.no-scroll {
+    overflow: hidden;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 10000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    margin: 10% auto; 
+    padding: var(--space-xl);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    width: 80%; 
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    animation: slideDownModal 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    transform: translateZ(0);
+}
+
+@keyframes slideDownModal {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.close-button {
+    color: rgba(255,255,255,0.7);
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-white);
+    transform: scale(1.1);
+    outline: none;
+}
+
+.modal-body {
+    padding-bottom: var(--space-md);
+}
+
+.modal-body p {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.modal-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: var(--space-lg);
+}
+
+.modal-body ul li {
+    position: relative;
+    padding-left: 1.8em;
+    margin-bottom: var(--space-sm);
+    font-size: 1rem;
+}
+
+.modal-body ul li::before {
+    content: '\2713'; /* Checkmark */
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.modal-footer {
+    text-align: right;
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-footer .cta-button {
+    font-size: 1rem;
+    padding: 0.8em 1.8em;
+}
+
+/* Para o spinner de carregamento do botão */
+.cta-button.is-loading .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Ocultar visualmente, mas manter acessível para leitores de tela */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none; /* Escondido por padrão, mostrado via JS e media query */
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5em;
+    z-index: 1100;
+    position: fixed; /* Para ficar sobre outros conteúdos */
+    top: 15px;
+    right: 15px;
+}
+
+.main-navigation {
+    /* Estilos existentes do menu desktop */
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-left: var(--space-lg);
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--color-secondary);
+}
+
+
+@media (max-width: 767px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        display: none; /* Escondido por padrão no mobile */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 23, 52, 0.98); /* --color-primary com opacidade */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-navigation.is-open {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-navigation li {
+        margin: var(--space-md) 0;
+    }
+
+    .main-navigation a {
+        font-size: 1.5rem;
+        padding: 0.8em 1.5em;
+    }
+}
+
+
+/* Para a animação do cookie consent */
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: var(--space-lg);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+    z-index: 2000;
+    display: none; /* none por padrão, JS controla */
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    border-top: 2px solid var(--color-secondary);
+    animation: slideUpFadeIn 0.5s ease-out forwards;
+}
+
+.cookie-consent-banner p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.cookie-consent-banner p a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+.cookie-consent-banner .cta-button {
+    font-size: 0.9rem;
+    padding: 0.7em 1.5em;
+    box-shadow: 
+        0 8px 16px rgba(0,0,0,0.1),
+        0 0 0 2px rgba(255,188,10,0.2);
+}
+
+@media (max-width: 767px) {
+    .cookie-consent-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cookie-consent-banner .cta-button {
+        width: 100%;
+        margin-top: var(--space-sm);
+    }
+}
