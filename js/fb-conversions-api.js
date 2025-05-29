@@ -316,7 +316,15 @@ async function triggerViewContentForCTA() {
 
   const capiPayloadBuilder = (eventId) => ({
     eventId: eventId,
-    userData: { ...globalUserData }, // Passa uma cópia dos dados globais
+    userData: {
+      external_id: globalUserData.external_id ? [globalUserData.external_id] : undefined,
+      em: globalUserData.em ? [globalUserData.em] : undefined,
+      ph: globalUserData.ph ? [globalUserData.ph] : undefined,
+      fn: globalUserData.fn ? [globalUserData.fn] : undefined,
+      ln: globalUserData.ln ? [globalUserData.ln] : undefined,
+      fbc: globalUserData.fbc || undefined,
+      fbp: globalUserData.fbp || undefined,
+    },
     customData: {
       content_name: productData.name,
       content_category: productData.category,
@@ -363,14 +371,23 @@ async function triggerLeadEvent(formData) {
 
   const capiPayloadBuilder = (eventId) => ({
     eventId: eventId,
-    userData: { ...globalUserData }, // Usa os dados atualizados
+    userData: {
+      external_id: globalUserData.external_id ? [globalUserData.external_id] : undefined,
+      em: globalUserData.em ? [globalUserData.em] : undefined,
+      ph: globalUserData.ph ? [globalUserData.ph] : undefined,
+      fn: globalUserData.fn ? [globalUserData.fn] : undefined,
+      ln: globalUserData.ln ? [globalUserData.ln] : undefined,
+      fbc: globalUserData.fbc || undefined,
+      fbp: globalUserData.fbp || undefined,
+      // Note: 'faturamento' from globalUserData will be used in customData below
+    },
     customData: {
       content_name: leadContentName,
       content_category: 'Lead',
       lead_source: 'website_form',
       form_name: 'capture-form',
       faturamento_medio_mensal: globalUserData.faturamento, // Incluindo o faturamento
-      // value e currency podem ser omitidos ou definidos. Ex: value: 0 para lead gratuito.
+      // value e currency can be omitted or defined. Ex: value: 0 for lead gratuito.
     },
     eventSourceUrl: window.location.href,
     urlParameters: getUrlParameters(),
