@@ -133,12 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const webhookUrl = 'https://dozeroao100k.up.railway.app/webhook/resgate-passaporte'; // Substitua se necessário
         const redirectUrl = 'https://dozeroa100k.com.br/obrigado-passaporte/'; // Substitua se necessário
         
-        // Adicione um evento de clique explícito para o botão (redundância)
-        submitButton.addEventListener('click', (e) => {
-            console.log("Button clicked");
-            if (form) form.dispatchEvent(new Event('submit'));
-        });
-
         form.addEventListener('submit', async (event) => {
             console.log("Form submission triggered");
             event.preventDefault();
