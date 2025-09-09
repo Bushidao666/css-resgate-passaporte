@@ -130,7 +130,102 @@
 
 @media (max-width: 767px) {
     .tools-grid {
-        grid-template-columns: 1fr;
+        display: block; /* Mudar de grid para block no mobile */
+        gap: 0;
+    }
+    
+    .tool-card {
+        margin-bottom: var(--space-lg);
+        border-radius: 12px;
+        padding: var(--space-lg);
+        background: var(--color-white);
+        border: 2px solid var(--color-light-gray);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    .tool-card:hover {
+        transform: none; /* Desabilitar hover effects no mobile */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    .tool-card.featured {
+        border: 2px solid var(--color-secondary);
+        background: linear-gradient(135deg, rgba(255, 188, 10, 0.05) 0%, rgba(255, 188, 10, 0.02) 100%);
+        position: relative;
+        overflow: visible;
+    }
+    
+    .tool-card.featured::before {
+        content: 'DESTAQUE';
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        background: var(--color-secondary);
+        color: var(--color-primary-dark);
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+    
+    .tool-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .tool-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .tool-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: var(--space-sm);
+        text-align: left;
+    }
+    
+    .tool-card p {
+        text-align: left;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--color-text);
+        margin-bottom: var(--space-md);
+    }
+    
+    .tool-badge {
+        align-self: flex-start;
+        font-size: 0.7rem;
+    }
+    
+    /* Layout horizontal para ícone e conteúdo no mobile */
+    .tool-card {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
         gap: var(--space-md);
+    }
+    
+    .tool-icon {
+        flex-shrink: 0;
+    }
+    
+    .tool-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Animações desabilitadas no mobile */
+    .tool-icon::after {
+        display: none;
+    }
+    
+    .tool-card:hover .tool-icon {
+        transform: none;
+    }
+    
+    .tool-card:hover .tool-icon i {
+        transform: none;
     }
 } 

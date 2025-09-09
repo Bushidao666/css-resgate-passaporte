@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nome: document.getElementById('nome').value,
                 email: document.getElementById('email').value,
                 telefone: document.getElementById('telefone').value,
-                faturamento: document.getElementById('faturamento').value
+                area_atuacao: document.getElementById('area-atuacao').value
               };
               try {
                  await triggerLeadEvent(leadFormData); // Chama a função do fb-conversions-api.js

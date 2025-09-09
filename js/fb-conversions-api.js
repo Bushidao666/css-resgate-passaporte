@@ -69,7 +69,7 @@ let globalUserData = {
   ph: undefined,
   fn: undefined,
   ln: undefined,
-  faturamento: undefined,
+  area_atuacao: undefined,
 };
 
 function updateUserData(newData) {
@@ -348,7 +348,7 @@ async function triggerLeadEvent(formData) {
     ph: formData.telefone.replace(/\D/g, ''),
     fn: firstName,
     ln: lastName,
-    faturamento: formData.faturamento,
+    area_atuacao: formData.area_atuacao,
   };
   updateUserData(piiData); // Atualiza globalUserData e localStorage
   debugLog('Dados do usuário atualizados (pré-Lead)', globalUserData);
@@ -369,8 +369,13 @@ async function triggerLeadEvent(formData) {
       content_category: 'Lead',
       lead_source: 'website_form',
       form_name: 'capture-form',
+<<<<<<< Updated upstream
       faturamento_medio_mensal: globalUserData.faturamento, // Incluindo o faturamento
       // value e currency podem ser omitidos ou definidos. Ex: value: 0 para lead gratuito.
+=======
+      area_atuacao: globalUserData.area_atuacao, // Incluindo a área de atuação
+      // value e currency can be omitted or defined. Ex: value: 0 for lead gratuito.
+>>>>>>> Stashed changes
     },
     eventSourceUrl: window.location.href,
     urlParameters: getUrlParameters(),

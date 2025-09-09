@@ -595,7 +595,9 @@
 
     /* Espaçamento para o vídeo/imagem no mobile */
     .hero-image {
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-lg); /* Reduzir margem inferior do vídeo */
+        position: relative;
+        z-index: 5;
     }
 
     /* Esconder elementos originais da hero-content que serão duplicados abaixo no mobile */
@@ -613,9 +615,11 @@
     /* Mostrar e estilizar o container do conteúdo duplicado para mobile */
     .mobile-content-after-video {
         display: block;
-        margin-top: var(--space-xl);
+        margin-top: calc(var(--space-xxl) * 1.5); /* Maior espaçamento para evitar sobreposição */
         animation: fadeSlideIn 0.5s ease-out;
-        padding: 0 var(--space-sm); /* Pequeno padding horizontal */
+        padding: 0 var(--space-md); /* Padding horizontal adequado */
+        position: relative;
+        z-index: 10; /* Garantir que fique acima do vídeo */
     }
 
     /* Ajuste de padding para hero-content no mobile */
@@ -626,21 +630,40 @@
     /* Reforçar a call-to-action no mobile */
     .mobile-content-after-video .cta-button {
         width: 100%; /* Botão de largura total no mobile */
-        margin-top: var(--space-md);
-        padding: 1.1em 1.5em;
+        margin-top: var(--space-lg);
+        padding: 1.2em 1.5em;
         font-size: 1.1rem;
         text-align: center;
+        display: block;
+    }
+    
+    /* Ajustar subtitle no container mobile */
+    .mobile-content-after-video .subtitle {
+        margin-bottom: var(--space-lg);
+        padding-right: 0;
+    }
+    
+    /* Ajustar sub-headline no container mobile */
+    .mobile-content-after-video .sub-headline {
+        margin-bottom: var(--space-lg);
+        padding: 0;
     }
 }
 
 @media (max-width: 480px) {
     .video-preview {
-        height: 65vw; /* Proporção aumentada para telas pequenas */
+        height: 60vw; /* Proporção otimizada para telas pequenas */
     }
     
     .video-player-container {
         margin-top: 0;
-        margin-bottom: var(--space-lg);
+        margin-bottom: 0; /* Remover margem inferior para evitar espaço duplo */
+    }
+    
+    /* Garantir espaçamento adequado do conteúdo mobile */
+    .mobile-content-after-video {
+        margin-top: calc(var(--space-xl) * 2); /* Espaçamento extra em telas muito pequenas */
+        padding: 0 var(--space-sm);
     }
     
     /* Ajustes finos para telas muito pequenas */

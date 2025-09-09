@@ -140,5 +140,95 @@
 @media (max-width: 767px) {
     .conversion-features {
         grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .conversion-showcase {
+        padding: var(--space-lg);
+        border-radius: 12px;
+    }
+    
+    .conversion-showcase:hover {
+        transform: none; /* Desabilitar hover no mobile */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .conversion-card {
+        padding: var(--space-lg);
+        border-radius: 12px;
+        margin-bottom: var(--space-lg);
+        background: var(--color-white);
+        border: 2px solid var(--color-light-gray);
+    }
+    
+    .conversion-card:last-child {
+        margin-bottom: 0;
+    }
+    
+    .conversion-card:hover {
+        transform: none; /* Desabilitar hover no mobile */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+    
+    .conversion-icon {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .conversion-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .conversion-icon::after {
+        display: none; /* Remover animação no mobile */
+    }
+    
+    .conversion-card:hover .conversion-icon {
+        transform: none; /* Desabilitar animação no mobile */
+    }
+    
+    .conversion-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: var(--space-sm);
+        text-align: left;
+    }
+    
+    .conversion-content p {
+        font-size: 0.95rem;
+        text-align: left;
+        margin-bottom: var(--space-md);
+    }
+    
+    .conversion-features li {
+        padding: 0.6em 0.9em;
+        font-size: 0.9rem;
+        background: rgba(82, 99, 255, 0.05);
+        border: 1px solid rgba(82, 99, 255, 0.1);
+    }
+    
+    .conversion-features li:hover {
+        transform: none; /* Desabilitar hover no mobile */
+        background: rgba(82, 99, 255, 0.05);
+        box-shadow: none;
+    }
+    
+    .conversion-features li i {
+        font-size: 1rem;
+        margin-right: var(--space-xs);
+    }
+    
+    /* Layout horizontal para ícone e conteúdo no mobile */
+    .conversion-card {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .conversion-icon {
+        margin-right: var(--space-md);
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 } 
